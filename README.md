@@ -3,6 +3,12 @@
 **Author:** Cameron Batts  
 **Tools:** Python · pandas · scikit-learn · NLTK · TextBlob
 
+## Validation update - October 22, 2026
+
+The full 14-cell workflow reproduced 20,000 sample tweets, mean length 121.5088 characters and 20,770 vocabulary terms. Emoticon matching found 482 positive and 14 negative matches: 496 unique tweets and 0 in both categories. The controlled sentence change moved Naive Bayes positive probability from 0.2220 to 0.9044. No labeled holdout or healthcare outcome evaluation was performed.
+
+[Aggregate validation record](reports/validation_results.json). [Repeatable validation script](validation/rerun_analysis.py). Run `python validation/rerun_analysis.py` from the project root. Install `requirements-validation.txt` first; source CSVs stay local.
+
 ## Business Problem
 Text feedback can reveal service concerns that numerical ratings miss. This project compares sentiment methods on public tweets and considers their potential application to radiology patient feedback. No patient data or deployed business outcomes are represented.
 
@@ -12,7 +18,7 @@ Text feedback can reveal service concerns that numerical ratings miss. This proj
 - Compare model behavior with VADER, TextBlob, and emoticon matching.
 - Examine sensitivity to added positive words.
 
-## Key Results
+## Historical findings and original context
 The supplied run reported a mean text length of **121.51 characters** and a classifier vocabulary of **20,770 terms**. Emoticon matching found **482 positive matches** and **14 negative matches**, with overlap not measured in the original run.
 
 Adding positive tokens to a negative sentence moved Naive Bayes positive probability from **0.222 to 0.904**, TextBlob polarity from **−1.0 to 0.3**, and VADER compound score from **−0.4767 to 0.9022**.
@@ -24,7 +30,7 @@ These are descriptive and illustrative results. No labeled holdout evaluation wa
 python -m pip install -r requirements.txt
 jupyter lab notebooks/sentiment_analysis_comparison.ipynb
 ```
-Run cells from top to bottom. The first run downloads `twitter_samples` and `vader_lexicon` from NLTK and requires internet access. Dependencies are unpinned; this portfolio conversion was syntax-checked but not re-executed. Selected original aggregate outputs remain in the notebook.
+Run cells from top to bottom. The first run downloads `twitter_samples` and `vader_lexicon` from NLTK and requires internet access. Dependencies are unpinned; this workflow has now been re-executed. Selected original aggregate outputs remain in the notebook.
 
 ## Repository Structure
 ```text

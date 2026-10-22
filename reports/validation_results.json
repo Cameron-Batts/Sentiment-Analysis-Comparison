@@ -1,0 +1,26 @@
+{
+  "sample_rows": 20000,
+  "training_rows": 10000,
+  "mean_text_length": 121.5088,
+  "vocabulary_size": 20770,
+  "positive_emoticon_matches": 482,
+  "negative_emoticon_matches": 14,
+  "unique_emoticon_matches": 496,
+  "both_emoticon_categories": 0,
+  "original_sentence_nb_positive": 0.22200168062658243,
+  "modified_sentence_nb_positive": 0.9043949417063923,
+  "checked_at_utc": "2026-10-22T21:55:07.916633+00:00",
+  "python": "3.12.14",
+  "versions": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scikit-learn": "1.8.0",
+    "nltk": "3.10.4",
+    "textblob": "0.20.1"
+  },
+  "executed_code_cells": 14,
+  "generated_figures": 0,
+  "elapsed_seconds": 16.747074604034424,
+  "input_sha256": {},
+  "scope": "Full notebook rerun on NLTK corpora. Descriptive scores and sentence perturbations only; no labeled holdout or healthcare outcome evaluation."
+}
